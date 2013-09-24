@@ -4,22 +4,7 @@ import java.lang.Math;
 class stats{
 	
 	public static void main(String[] args) {
-		int[] a = {5,2,5,8,12,253,0,-2,-6,-3};
-		int[] b = {2,5,7,1,7,2,7,3,4,7,2,7,8,92,7};
-		int[] m = {5, 5, 5, 5, 5};
-		int[] o = {4,3,2,5,1};
-		int[] d = {600, 470, 170, 430, 300};
-		System.out.println(max(a));
-		System.out.println(min(a));
-		System.out.println(mean(m));
-		System.out.println(median(a));
-		System.out.println(median(o));
-		System.out.println(quatile1(o));
-		System.out.println(quatile3(o));
-		System.out.println(mode(a));
-		System.out.println(mode(b));
-		System.out.println(standardDeviation(d));
-		//standard deviation
+
 	}
 
 	public static int max(int[] a){
