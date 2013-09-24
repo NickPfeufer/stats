@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.lang.Math;
 
 class stats{
 	
@@ -7,6 +8,7 @@ class stats{
 		int[] b = {2,5,7,1,7,2,7,3,4,7,2,7,8,92,7};
 		int[] m = {5, 5, 5, 5, 5};
 		int[] o = {4,3,2,5,1};
+		int[] d = {600, 470, 170, 430, 300};
 		System.out.println(max(a));
 		System.out.println(min(a));
 		System.out.println(mean(m));
@@ -16,6 +18,7 @@ class stats{
 		System.out.println(quatile3(o));
 		System.out.println(mode(a));
 		System.out.println(mode(b));
+		System.out.println(standardDeviation(d));
 		//standard deviation
 	}
 
@@ -118,4 +121,18 @@ class stats{
 		return curentMode;
 
 	}
+
+	public static double standardDeviation(int[] a){
+		double arrayMean = mean(a);
+		double answer = 0.0;
+		double transition;
+		for (int i = 0; i<a.length; i++) {
+			transition = a[i] - arrayMean;
+			answer += (transition * transition);
+		}
+		answer/= (a.length-1);
+		answer = Math.sqrt(answer);
+		return answer;
+	}
+
 }
