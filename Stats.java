@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.lang.Math;
 
-class stats{
+class Stats{
 	
 	public static void main(String[] args) {
 
