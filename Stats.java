@@ -50,7 +50,7 @@ class Stats{
 
 	} 
 
-	public static int quartile1(int[] a){
+	public static double quartile1(int[] a){
 		int[] x = new int[a.length];
 		int median;
 		for (int i = 0; i<a.length; i++) {
@@ -69,7 +69,7 @@ class Stats{
 		return median(quatile);
 
 	}
-	public static int quartile3(int[] a){
+	public static double quartile3(int[] a){
 		int[] x = new int[a.length];
 		int median;
 		for (int i = 0; i<a.length; i++) {
