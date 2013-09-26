@@ -4,7 +4,9 @@ import java.lang.Math;
 class Stats{
 	
 	public static void main(String[] args) {
+		int[] a = {1,2,3,4,5,6,7,8,9,10, 11,12,13,14,15,16,17,18,19,20};
 
+		System.out.println(quartile3(a));
 	}
 
 	public static int max(int[] a){
@@ -36,14 +38,16 @@ class Stats{
 		return mean;
 	}
 
-	public static int median(int[] a){
+	public static double median(int[] a){
 		int[] x = new int[a.length];
 		for (int i = 0; i<a.length; i++) {
 			x[i] = a[i];
 		}
 		Arrays.sort(x);
+		System.out.println(x.length);
 		if (x.length%2 == 0) {
-			return (x[x.length/2] + x[x.length/2-1])/2;
+			System.out.println("even");
+			return (x[(x.length/2-1)] + x[x.length/2])/2.0;
 		}else{
 			return x[(x.length-1)/2];
 		}
@@ -62,7 +66,7 @@ class Stats{
 		}else{
 			median = (x.length-1)/2;
 		}
-		int[] quatile = new int[median+1];
+		int[] quatile = new int[median];
 		for (int i = 0; i<quatile.length; i++) {
 			quatile[i] = x[i];
 		}
@@ -79,11 +83,11 @@ class Stats{
 		if (x.length%2 == 0) {
 			median = x.length/2;
 		}else{
-			median = (x.length-1)/2;
+			median = (x.length+1)/2;
 		}
 		int[] quatile = new int[x.length-median];
 		for (int i = 0; i<quatile.length; i++) {
-			quatile[i]=x[median + 1];
+			quatile[i]=x[median + i];
 		}
 		return median(quatile);
 	}
